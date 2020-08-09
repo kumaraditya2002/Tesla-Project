@@ -57,9 +57,9 @@ void loop() {
   Wire.endTransmission();
   Wire.requestFrom(0b1101000,6); //Request Accel Registers (3B - 40)
   while(Wire.available() < 6);
-  accelX = Wire.read()<<8|Wire.read()/ 16384.0; //Store first two bytes into accelX
-  accelY = Wire.read()<<8|Wire.read()/ 16384.0; //Store middle two bytes into accelY
-  accelZ = Wire.read()<<8|Wire.read()/ 16384.0; //Store last two bytes into accelZ
+  accelX = (Wire.read()<<8)|Wire.read()/ 16384; //Store first two bytes into accelX
+  accelY = (Wire.read()<<8)|Wire.read()/ 16384; //Store middle two bytes into accelY
+  accelZ = (Wire.read()<<8)|Wire.read()/ 16384; //Store last two bytes into accelZ
   accAngleY = atan(-1 * accelX / sqrt(pow(accelY,2) + pow(accelZ,2))) * 180/PI;
   
   prevTime = currTime;
@@ -70,9 +70,9 @@ void loop() {
   Wire.endTransmission();
   Wire.requestFrom(0b1101000,6); //Request Gyro Registers (43 - 48)
   while(Wire.available() < 6);
-  gyroX = Wire.read()<<8|Wire.read()/ 131.0; //Store first two bytes into accelX
-  gyroY = Wire.read()<<8|Wire.read()/ 131.0; //Store middle two bytes into accelY
-  gyroZ = Wire.read()<<8|Wire.read()/ 131.0; //Store last two bytes into accelZ
+  gyroX = (Wire.read()<<8)|Wire.read()/ 131; //Store first two bytes into accelX
+  gyroY = (Wire.read()<<8)|Wire.read()/ 131; //Store middle two bytes into accelY
+  gyroZ = (Wire.read()<<8)|Wire.read()/ 131; //Store last two bytes into accelZ
   gyroAngleY = gyroAngleY + gyroY * elapsedTime;
 
   //complemetry filter
