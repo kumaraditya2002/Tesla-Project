@@ -18,6 +18,8 @@
 
 8. Jumper wires
 
+9. Breadboard 
+
 # Things you will learn
 PID Control
 
