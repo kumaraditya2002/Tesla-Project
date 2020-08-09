@@ -79,7 +79,7 @@ void loop() {
   pitch = 0.96*gyroAngleY + 0.04*accAngleY;
   input = pitch + 180;
 
-  pid.compute();
+  pid.Compute();
   if(input>150 && input<200) //bot is falling
   {
     if(output>0) //falling towards front
