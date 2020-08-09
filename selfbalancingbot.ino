@@ -83,9 +83,9 @@ void loop() {
   if(input>150 && input<200) //bot is falling
   {
     if(output>0) //falling towards front
-      forward(); //move forward
+      Forward(); //move forward
     else if(output<0) //falling towards back
-      reverse(); //move back
+      Reverse(); //move back
   }
   else
     Stop(); // stop
