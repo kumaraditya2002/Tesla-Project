@@ -16,6 +16,8 @@
 
 7. 9volt battery-2
 
+8. Jumper wires
+
 # Things you will learn
 PID Control
 
