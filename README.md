@@ -16,9 +16,7 @@
 
 7. 9volt battery-2
 
-8. Jumper wires
-
-9. Breadboard 
+8. Breadboard 
 
 # Things you will learn
 PID Control
